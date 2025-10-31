@@ -1,14 +1,17 @@
 import { useAuthStore } from "@/stores/auth-store";
-import { Stack } from "expo-router";
+import { Stack, useRouter } from "expo-router";
 import { useEffect } from "react";
 import { ActivityIndicator, View } from "react-native";
 
-export default function RootLayout() {
-  const { initialize, loading } = useAuthStore();
+export default function AuthLayout() {
+  const { session, loading } = useAuthStore();
+  const router = useRouter();
 
   useEffect(() => {
-    initialize();
-  }, []);
+    if (!loading && session) {
+      router.replace("/protected/dashboard");
+    }
+  }, [loading, session]);
 
   if (loading) {
     return (
@@ -24,6 +27,8 @@ export default function RootLayout() {
       </View>
     );
   }
+
+  if (session) return null;
 
   return <Stack screenOptions={{ headerShown: false }} />;
 }
