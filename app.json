@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "SBORR",
-    "slug": "SBORR",
+    "name": "sborr",
+    "slug": "sborr",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -9,15 +9,17 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.uncledev.sborr"
     },
     "android": {
+      "package": "com.uncledev.sborr",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE"
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#0F6B3E"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false,
-      "package": "com.uncled3v.SBORR"
+      "predictiveBackGestureEnabled": false
     },
     "web": {
       "output": "static",
@@ -31,9 +33,9 @@
           "image": "./assets/images/icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#0F6B3E",
           "dark": {
-            "backgroundColor": "#000000"
+            "backgroundColor": "#0F6B3E"
           }
         }
       ]
@@ -45,7 +47,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "ca50a7c8-e654-4553-a8fd-26259ed0d0aa"
+        "projectId": "b2b1346b-dcf5-41b1-b89d-a8f41ae75d66"
       }
     }
   }

@@ -4,7 +4,8 @@ import { useUserStore } from "@/stores/user-store";
 import { Feather, Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import { useEffect } from "react";
-import { SafeAreaView, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function TabsLayout() {
   const { fetchAllUsers, fetchLogonUser, subscribeToUsers } = useUserStore();
